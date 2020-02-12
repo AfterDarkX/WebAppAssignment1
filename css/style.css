@@ -1,0 +1,14 @@
+#banner {
+  background-color: aqua;
+  text-align: center;
+
+}
+.container{
+    display: flex;
+}
+#commu_voice {
+  background-color: burlywood;
+}
+#commu_board{
+    background-color: chocolate;
+}
