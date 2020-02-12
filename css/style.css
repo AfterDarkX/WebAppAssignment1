@@ -8,22 +8,20 @@
   display: flex;
 }
 #commu_board {
-  background-color: #00000050;
+  background-color: #ff4181;
   height: 100%;
   margin: 0;
   padding: 50px;
   width: 50%;
   max-width: 50%;
-
 }
 #commu_voice {
-  background-color: rgb(67, 168, 81);
+  background-color: #ff4181;
   height: 100%;
   margin: 0;
   padding: 50px;
   width: 50%;
   max-width: 50%;
- 
 }
 body {
   margin: 0;
