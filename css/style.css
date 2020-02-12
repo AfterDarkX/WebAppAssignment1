@@ -1,14 +1,65 @@
 #banner {
-  background-color: aqua;
+  background-color: #ff4181;
   text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+}
+#commu_board {
+  background-color: #00000050;
+  height: 100%;
+  margin: 0;
+  padding: 50px;
+  width: 50%;
+  max-width: 50%;
 
 }
-.container{
-    display: flex;
-}
 #commu_voice {
-  background-color: burlywood;
+  background-color: rgb(67, 168, 81);
+  height: 100%;
+  margin: 0;
+  padding: 50px;
+  width: 50%;
+  max-width: 50%;
+ 
 }
-#commu_board{
-    background-color: chocolate;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+#leftSide {
+  position: absolute;
+  left: 10px;
+  margin-top: 5px;
+  width: 160px;
+  background-color: #ffff66;
+  height: 100%;
+  min-height: 100%;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+}
+#midContent {
+  position: absolute;
+  margin-left: 170px;
+  margin-right: 170px;
+  margin-top: 5px;
+  background-color: #ccffcc;
+  border: 2px dotted #000000;
+}
+
+#rightSide {
+  position: absolute;
+  right: 10px;
+  width: 160px;
+  margin-top: 5px;
+  background-color: #ccff66;
+  height: 100%;
+  min-height: 100%;
 }
