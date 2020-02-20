@@ -1,0 +1,87 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__menu {
+  display: none;
+}
+
+/* make .movies width 100% for any screen size */
+.movies {
+    flex: 0 0 100%;
+}
+@media screen and (max-width: 610px) {
+  .header__logo {
+    height: 48px;
+    margin-right: 0.5em;
+  }
+  .header__title {
+    margin-left: 0;
+    font-size: 2em;
+    vertical-align: bottom; 
+  }
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(5000px, 0);
+    transform: translate(5000px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.5s ease; 
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+  .nav__header {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1em;
+  }
+  .nav__header svg {
+    width: 32px;
+    fill: #E0E0E0;
+  }
+  .nav__header:hover + #drawer, .nav.open { 
+    transform: translate(0, 0); 
+    transition: transform 0.5s ease;
+    display: block; 
+    right: 0;
+  }
+  .snippet__date {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 611px) {
+  .hili {
+    flex: 0 0 60%;
+  }
+  .top-movies {
+    flex: 0 0 40%; 
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .hili {
+    flex: 0 0 50%;
+  }
+  .top-movies {
+    flex: 0 0 50%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  main, .header__inner, .nav, .content {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

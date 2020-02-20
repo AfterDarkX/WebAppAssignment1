@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,  user-scalable=0"/>
+    <title>Movie Theater</title>
+     <link rel="stylesheet" type="text/css" href="final.css"> 
+  </head>
+  <body>
+        <section class="movies recent-movies">
+          <h2 class="movies__title">Latest movies<a href="#" class="movies__more">+ more</a></h2>
+          <div id="snippet_list">
+            <div class="snippet">
+                <div class="snippet__thumbnail">
+                  <img src='img/avengersendgame.jpg' alt="picture of Avengers: Endgame">
+                </div>
+                <div class="snippet__content">
+                  <h3 class="snippet__title"><a href="#">Avengers: Endgame</a></h3>
+                  <div class="snippet__synopsis">The plot is yet to be revealed. Will be the fourth installment of the 'Avengers' series. <br>
+                    <span class="snippet__date">Start: April 26, 2019</span>
+                    <span class="snippet__date">End: June 30, 2019</span>
+                  </div>
+                </div>
+              </div>
+              <div class="snippet">
+                <div class="snippet__thumbnail">
+                  <img src='img/avengersendgame.jpg' alt="picture of Avengers: Endgame">
+                </div>
+                <div class="snippet__content">
+                  <h3 class="snippet__title"><a href="#">Avengers: Endgame</a></h3>
+                  <div class="snippet__synopsis">The plot is yet to be revealed. Will be the fourth installment of the 'Avengers' series. <br>
+                    <span class="snippet__date">Start: April 26, 2019</span>
+                    <span class="snippet__date">End: June 30, 2019</span>
+                  </div>
+                </div>
+              </div>
+          <script>
+              const stories = [
+              {
+                title: "Avengers: Endgame",
+                image: "avengersendgame.jpg",
+                synopsis: "The plot is yet to be revealed. Will be the fourth installment of the 'Avengers' series. ",
+                startDate: "April 26, 2019",
+                endDate: "June 30, 2019",
+              },
+              {
+                title: "The Rainbow Experiment",
+                image: "rainbowexperiment.jpg",
+                synopsis: "The story takes place in a high school where things spiral out of control when a terrible accident involving a science experiment injures a kid for life.",
+                startDate: "December 7, 2018",
+                endDate: "March 1, 2019",
+              },
+              {
+                title: "Captain Marvel - Trailer 2",
+                image: "captainmarvel.jpg",
+                synopsis: "Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.",
+                startDate: "December 3, 2018",
+                endDate: "March 20, 2019",
+              },
+              {
+                title: "You Might Be the Killer",
+                image: "youmightbethekiller.jpg",
+                synopsis: "A camp counselor suffering from blackouts finds himself surrounded by murder victims. He turns to his horror movie enthusiast friend for advice, and to contend with the idea he may be the killer.",
+                startDate: "December 4, 2018",
+                endDate: "April 10, 2019",
+              },
+              {
+                title: "Sgt. Will Gardner",
+                image: "sgtwillgardner.jpg",
+                synopsis: "A troubled Iraq War veteran struggling to reintegrate into society sets out on a cross-country journey with the hope of reuniting with his young son.",
+                startDate: "January 11, 2019",
+                endDate: "March 2, 2019",
+              },
+            ];
+
+            function mapOList(arr) {
+                /*
+                 * Fill your code here!!!
+                 */
+              var result  = arr.map((ele) => {
+                return `<div class="snippet"> 
+                  <div class='snippet__thumbnail'>
+                    <img src='img/${ele.image}' alt='picture of ${ele.title}'> 
+                  </div>
+                  <div class="snippet__content">
+                    <h3 class="snippet__title"><a href="#">${ele.title}</a></h3>
+                    <div class="snippet__synopsis">${ele.synopsis}<br>
+                      <span class="snippet__date">Start: ${ele.startDate}</span>
+                      <span class="snippet__date">End: ${ele.endDate}</span>
+                    </div>
+                  </div>
+                </div>` 
+              });
+              return "<div class='snippet-box'>" + result.join("") + "</div>"; 
+            }
+            var putContent = function() { document.getElementById("snippet_list").innerHTML = mapOList(stories); }
+            window.onload = putContent();
+          </script>
+        </div>
+      </section>
+  </body>
+</html>
