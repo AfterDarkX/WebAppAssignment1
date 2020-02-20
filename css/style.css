@@ -1,63 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* height: 100%;
+  min-height: 100%; */
+}
+
 #banner {
   background-color: #ff4181;
   text-align: center;
   margin: 0;
   padding: 0;
+  width: auto;
+  height: 25%;
 }
 .container {
   display: flex;
 }
-#commu_board {
-  background-color: #ff4181;
-  height: 100%;
-  margin: 0;
-  padding: 50px;
-  width: 50%;
-  max-width: 50%;
-}
-#commu_voice {
-  background-color: #ff4181;
-  height: 100%;
-  margin: 0;
-  padding: 50px;
-  width: 50%;
-  max-width: 50%;
-}
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  min-height: 100%;
-}
 
 #leftSide {
+  text-align: center;
   position: absolute;
-  left: 10px;
-  margin-top: 5px;
-  width: 160px;
-  background-color: #ffff66;
-  height: 100%;
-  min-height: 100%;
+  left: 0%;
+  width: 50%;
+  background-color: #ff4181;
+  height: 75%;
+  /* min-height: 100%; */
 }
+
+#rightSide {
+  text-align: center;
+  position: absolute;
+  right: 0%;
+  width: 50%;
+  background-color: #ff4181;
+  height: 75%;
+  /* min-height: 100%; */
+}
+
 #footer {
   position: fixed;
   bottom: 0;
 }
-#midContent {
-  position: absolute;
-  margin-left: 170px;
-  margin-right: 170px;
-  margin-top: 5px;
-  background-color: #ccffcc;
-  border: 2px dotted #000000;
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
-#rightSide {
-  position: absolute;
-  right: 10px;
-  width: 160px;
-  margin-top: 5px;
-  background-color: #ccff66;
-  height: 100%;
-  min-height: 100%;
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10% 14px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+.card {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: white;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25%;
+  border-radius:2% ;
+}
+
+.cardContainer {
+  padding: 2px 16px;
 }
