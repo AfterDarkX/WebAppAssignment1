@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   /* display: inline-block; */
   margin: 0;
@@ -24,6 +28,33 @@ html {
   height: 25%;
 }
 /*## HEADER ##*/
+
+/*## NAV ##*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10% 14px;
+  text-decoration: none;
+  background-color: #111;
+}
+
+.active {
+  background-color: #4caf50;
+}
+/*## NAV ##*/
 
 /*## BODY ##*/
 #content {
@@ -57,47 +88,7 @@ html {
 
 /*## BODY ##*/
 
-.container {
-  display: flex;
-}
-.card_descrip {
-  overflow: auto;
-  margin-right: 10%;
-}
-
-#card_footer {
-  margin-right: 6%;
-}
-
-#footer {
-  position: fixed;
-  bottom: 0;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: right;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 10% 14px;
-  text-decoration: none;
-  background-color: #111;
-}
-
-.active {
-  background-color: #4caf50;
-}
+/*## CARD ##*/
 .card {
   position: relative;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -120,6 +111,31 @@ li a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.card_descrip {
+  overflow: auto;
+  margin-right: 10%;
+}
+
+.card_footer {
+  margin-right: 6%;
+}
+@media screen and(max-width:600px) {
+  p {
+    color: green;
+  }
+  .cardContainer {
+    display: none;
+  }
+  #leftSide{
+    background-color: greenyellow;
+  }
+}
+/*## CARD ##*/
+#footer {
+  position: fixed;
+  bottom: 0;
+}
+
 @media screen and (max-width: 900px) {
   .card {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
