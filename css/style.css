@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
+.rwd_button{
+  display: none;
+}
 body {
   /* display: inline-block; */
   margin: 0;
@@ -57,7 +59,7 @@ li a {
 /*## NAV ##*/
 
 /*## BODY ##*/
-#content {
+#containter {
   display: grid;
   position: absolute;
   grid-template-columns: 1fr 1fr;
@@ -71,7 +73,7 @@ li a {
   left: 0%;
   width: 50%;
   background-color: #ff4181;
-  height: 75%;
+  height: 100%;
   min-width: 270px;
   /* min-height: 100%; */
 }
@@ -81,7 +83,7 @@ li a {
   right: 0%;
   width: 50%;
   background-color: #ff4181;
-  height: 75%;
+  height: 100%;
   min-width: 270px;
   /* min-height: 100%; */
 }
@@ -101,6 +103,7 @@ li a {
   min-width: 260px;
 }
 .cardContainer {
+  margin-left: 20%;
   display: grid;
   overflow: hidden;
   padding: 2px 16px;
@@ -119,39 +122,12 @@ li a {
 .card_footer {
   margin-right: 6%;
 }
-@media screen and(max-width:600px) {
-  p {
-    color: green;
-  }
-  .cardContainer {
-    display: none;
-  }
-  #leftSide{
-    background-color: greenyellow;
-  }
-}
 /*## CARD ##*/
-#footer {
-  position: fixed;
-  bottom: 0;
-}
-
-@media screen and (max-width: 900px) {
-  .card {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    background-color: white;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25%;
-    border-radius: 10%;
-  }
-  .button {
-    margin-right: 6%;
-  }
-}
+/* .button {
+  margin-right: 6%;
+} */
 .button {
-  background-color: #4caf50;
+  background-color: #03cea4;
   border: none;
   color: white;
   padding: 0px 32px;
@@ -161,4 +137,67 @@ li a {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  #banner {
+    background-color: #ff4181;
+  }
+  .cardContainer {
+    margin-left: 5%;
+  }
+  .rwd_button {
+    display: none;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 900px) {
+  .card {
+    display: none;
+  }
+  /* .cardContainer {
+    margin-left: 0%;
+    background-color: #03cea4;
+    height: 50px;
+  }
+  .card_header {
+    display: none;
+  }
+  .card_descrip {
+    display: none;
+  }
+  .img_icon{
+    height: ;
+  }
+  .button {
+    display: none;
+  } */
+  .rwd_button {
+    position: relative;
+    margin: auto;
+    width: 50%;
+    height: 15%;
+    display: block;
+    border-radius: 3%;
+    background-color: #03CEA4;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
 }
